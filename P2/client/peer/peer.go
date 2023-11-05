@@ -25,7 +25,7 @@ func (m *napsterMusicPeer) GetFileData(ctx context.Context, req *file_data.FileD
 	fileName := req.FileName
 
 	// read file provided in the request
-	dat, err := os.ReadFile(dir + "/client/peer/file-data/" + fileName)
+	dat, err := os.ReadFile(dir + "/client/peer/fdata/" + fileName)
 	if err != nil {
 		log.Printf("failed to find the file in the peer. Error: %v", err)
 		return nil, err
