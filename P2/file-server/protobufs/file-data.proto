@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "/file-data";
+
+service FileData {
+    rpc GetFileData(FileDataRequest) returns (FileDataResponse) {}
+}
+
+message FileDataRequest {
+    string fileName = 1;
+}
+
+message FileDataResponse {
+    bytes fileData = 1;
+}

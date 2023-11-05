@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "/file-meta";
+
+service FileServer {
+    rpc GetFileMetaInfo(FileMetaRequest) returns (FileMetaResponse) {}
+}
+
+message FileMetaRequest {
+    string fileName = 1;
+}
+
+message FileMetaResponse {
+    string clientIP = 1;
+    int32 portNumber = 2;
+}

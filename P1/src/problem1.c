@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <mpi.h>
-#include <string.h>
 #include <stdbool.h>
 
 #define ITERATIONS 500
