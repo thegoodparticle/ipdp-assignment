@@ -44,12 +44,12 @@ int main(void)
         {
             // determine neighbor processes
             int nextProcess = i + 1, prevProcess = i - 1;
-            if (i == 0)
+            if (n == 1) {
+                break; // there's no neighbor to send the data to
+            }
+            else if (i == 0)
             {
                 prevProcess = n - 1;
-            }
-            else if (n == 1) {
-                break;
             }
             else if (i == n - 1)
             {
