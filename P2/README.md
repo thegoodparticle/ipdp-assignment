@@ -1,10 +1,25 @@
 ## Prerequisites
 
-# Install Go on all nodes
+### Install Go on all nodes
 
 Follow steps mentioned here to install go on all the nodes
 https://go.dev/doc/install
 
+### Download source code
+
+- Source code is uploaded at https://github.com/thegoodparticle/ipdp-assignment/tree/main/P2
+
+- Use git command line to clone the repository on to the local nodes
+
+```
+git clone https://github.com/thegoodparticle/ipdp-assignment.git
+```
+
+- move to P2/ folder
+
+```
+cd P2/
+```
 
 ## Commands to execute
 
