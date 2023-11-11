@@ -42,10 +42,14 @@ int main(void)
         }
         else
         {
+            // determine neighbor processes
             int nextProcess = i + 1, prevProcess = i - 1;
             if (i == 0)
             {
                 prevProcess = n - 1;
+            }
+            else if (n == 1) {
+                break;
             }
             else if (i == n - 1)
             {
@@ -53,7 +57,7 @@ int main(void)
             }
 
             int recvBuffer;
-            // every other process will send 'i' value to next process (Tag=0) and receive the 'i-1' value from previous process (Tag=0)
+            // every process will send 'i' value to next process (Tag=0) and receive the 'i-1' value from previous process (Tag=0)
             MPI_Sendrecv(&i, 1, MPI_INT, nextProcess, 0, &recvBuffer, 1, MPI_INT, prevProcess, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 
             // if the received value is 0, mark the process as neutral

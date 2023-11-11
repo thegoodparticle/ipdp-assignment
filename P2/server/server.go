@@ -36,7 +36,7 @@ const (
 
 func main() {
 	// announce the transport layer protocol and the address
-	lis, err := net.Listen("tcp", fmt.Sprintf("localhost:%d", serverPort))
+	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", serverPort))
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}

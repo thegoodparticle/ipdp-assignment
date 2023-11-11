@@ -74,7 +74,7 @@ func main() {
 		log.Fatalf("error while getting file from peer. Error - %v", err)
 	}
 
-	log.Printf(`Requested file '%s' has below content \n\n "%s"\n\n`, fileName, string(fileData.FileData))
+	log.Printf("Requested file '%s' has below content \n\n '%s'\n\n", fileName, string(fileData.FileData))
 }
 
 func connectThroughGRPC(serverIP string, serverPort int) *grpc.ClientConn {
