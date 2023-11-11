@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"log"
 	"net"
@@ -27,7 +28,15 @@ func (s *napsterFileServer) GetFileMetaInfo(ctx context.Context, request *file_m
 	// data service defined separately to show the isolation of functionality and data
 	// data store method returns the file metadata for the requested file name
 	// if file metadata not found, returns an empty object
-	return s.dataStore.GetSpecificFileMetaData(request.FileName), nil
+	metaResponse := s.dataStore.GetSpecificFileMetaData(request.FileName)
+
+	log.Printf("responding with peer info PeerIP:%s PeerPort:%d", metaResponse.ClientIP, metaResponse.PortNumber)
+
+	if metaResponse.ClientIP == "" {
+		return nil, errors.New("could not find the file among metadata")
+	}
+
+	return metaResponse, nil
 }
 
 const (

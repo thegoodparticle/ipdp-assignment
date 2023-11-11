@@ -45,14 +45,14 @@ func main() {
 	resp, err := client.GetFileMetaInfo(context.Background(), &req)
 	if err != nil || resp == nil {
 		// if method responds with error, exit with error message
-		log.Fatalf("error while getting meta info. Error - %+v", err)
+		log.Fatalf("error while getting meta info. Error - %+v\nExiting client now...", err)
 	}
 
 	log.Printf("response received - %+v", resp)
 
 	// if in case, peer IP is not found for the requested file, exit with failure message
 	if resp.ClientIP == "" {
-		log.Fatalf("requested file meta not found in the server. exiting now...")
+		log.Fatalf("requested file meta not found in the server. Exiting client now...")
 	}
 
 	// once the peer IP and Port are found, connect to that peer through grpc
