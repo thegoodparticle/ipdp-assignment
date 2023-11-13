@@ -14,7 +14,7 @@ import (
 )
 
 const (
-	serverIP   = "127.0.0.1"
+	serverIP   = "127.0.0.1" // update this IP when we have server on a different node
 	serverPort = 8010
 )
 

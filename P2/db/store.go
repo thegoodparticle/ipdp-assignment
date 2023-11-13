@@ -14,6 +14,7 @@ type FileMetaData struct {
 	FilesStored      []string `json:"file_names"`
 }
 
+// update the peer IPs in this list with the node IPs
 const data = `
 [
     {
@@ -26,7 +27,7 @@ const data = `
     },
     {
         "client_ip": "127.0.0.1",
-        "client_port": 9011,
+        "client_port": 9010,
         "file_names": [
             "bones.mp3",
             "whatever_it_takes.mp3"
@@ -34,7 +35,7 @@ const data = `
     },
     {
         "client_ip": "127.0.0.1",
-        "client_port": 9012,
+        "client_port": 9010,
         "file_names": [
             "kala_chashma.mp3",
             "ilahi.mp3"

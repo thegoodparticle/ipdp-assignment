@@ -52,9 +52,9 @@ go run server/server.go
 ```
 go run client/peer/peer.go 9010
 
-go run client/peer/peer.go 9011
+go run client/peer/peer.go 9010
 
-go run client/peer/peer.go 9012
+go run client/peer/peer.go 9010
 ```
 
 6. Start the client and send the request from client for a particular file
