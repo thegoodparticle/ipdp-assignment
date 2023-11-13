@@ -18,7 +18,7 @@ git clone https://github.com/thegoodparticle/ipdp-assignment.git
 - move to P2/ folder
 
 ```
-cd P2/
+cd ipdp-assignment/P2/src
 ```
 
 ## Commands to execute
